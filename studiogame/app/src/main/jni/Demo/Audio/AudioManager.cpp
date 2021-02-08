@@ -83,7 +83,7 @@ bool AudioManager::initialize()
 	gChunkIndexes[AudioItem::CHUNK_LOST] = loadChunk("IrrlichtSdcard/lifelost.wav");
 #endif
 
-
+	return true;
 }
 
 void AudioManager::shutDown()
