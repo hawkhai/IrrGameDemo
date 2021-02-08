@@ -68,7 +68,7 @@ public:
 		u32 verticesOut = 0,
 		IShaderConstantSetCallBack* callback = 0,
 		IMaterialRenderer* baseMaterial = 0,
-		s32 userData = 0);
+		s64 userData = 0);
 
 	//! Destructor
 	virtual ~COpenGLSLMaterialRenderer();
@@ -98,7 +98,7 @@ protected:
 	COpenGLSLMaterialRenderer(COpenGLDriver* driver,
 					IShaderConstantSetCallBack* callback,
 					IMaterialRenderer* baseMaterial,
-					s32 userData=0);
+					s64 userData=0);
 
 	void init(s32& outMaterialTypeNr, 
 		const c8* vertexShaderProgram, 
@@ -124,7 +124,7 @@ protected:
 
 	GLhandleARB Program;
 	core::array<SUniformInfo> UniformInfo;
-	s32 UserData;
+	s64 userData;
 };
 
 

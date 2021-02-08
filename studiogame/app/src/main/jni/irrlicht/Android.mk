@@ -45,11 +45,13 @@ LOCAL_SRC_FILES := \
 	$(LIBAESGM) \
 	$(BZIP2OBJ) \
 	$(IRRANDROID)
-	
+
+	LOCAL_CFLAGS += -Wno-error=format-security -Wreturn-type
+    LOCAL_CPPFLAGS += -Wno-error=c++11-narrowing -Wno-error=format-security -Wreturn-type
 
 LOCAL_ARM_MODE   := arm 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
-LOCAL_CFLAGS := -O3 -DANDROID_NDK -DDISABLE_IMPORTGL -I./ -I./jni/SDL/include 
+LOCAL_CFLAGS := -O3 -DANDROID_NDK -DDISABLE_IMPORTGL -I$(LOCAL_PATH) -I$(LOCAL_PATH)/../SDL/include
 
 
 include $(BUILD_STATIC_LIBRARY)

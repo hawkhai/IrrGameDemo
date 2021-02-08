@@ -3468,7 +3468,7 @@ bool COpenGLDriver::setPixelShaderConstant(const c8* name, const f32* floats, in
 s32 COpenGLDriver::addShaderMaterial(const c8* vertexShaderProgram,
 	const c8* pixelShaderProgram,
 	IShaderConstantSetCallBack* callback,
-	E_MATERIAL_TYPE baseMaterial, s32 userData)
+	E_MATERIAL_TYPE baseMaterial, s64 userData)
 {
 	s32 nr = -1;
 	COpenGLShaderMaterialRenderer* r = new COpenGLShaderMaterialRenderer(
@@ -3496,7 +3496,7 @@ s32 COpenGLDriver::addHighLevelShaderMaterial(
 	u32 verticesOut,
 	IShaderConstantSetCallBack* callback,
 	E_MATERIAL_TYPE baseMaterial,
-	s32 userData)
+	s64 userData)
 {
 	s32 nr = -1;
 

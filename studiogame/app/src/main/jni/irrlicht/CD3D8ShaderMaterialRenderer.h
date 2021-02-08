@@ -32,7 +32,7 @@ public:
 	//! Public constructor
 	CD3D8ShaderMaterialRenderer(IDirect3DDevice8* d3ddev, video::IVideoDriver* driver,
 		s32& outMaterialTypeNr, const c8* vertexShaderProgram, const c8* pixelShaderProgram,
-		IShaderConstantSetCallBack* callback, IMaterialRenderer* baseMaterial, s32 userData);
+		IShaderConstantSetCallBack* callback, IMaterialRenderer* baseMaterial, s64 userData);
 
 	//! Destructor
 	~CD3D8ShaderMaterialRenderer();
@@ -54,7 +54,7 @@ protected:
 	CD3D8ShaderMaterialRenderer(IDirect3DDevice8* d3ddev,
 								video::IVideoDriver* driver,
 								IShaderConstantSetCallBack* callback,
-								IMaterialRenderer* baseMaterial, s32 userData=0);
+								IMaterialRenderer* baseMaterial, s64 userData=0);
 
 	void init(s32& outMaterialTypeNr, const c8* vertexShaderProgram, const c8* pixelShaderProgram,
 		E_VERTEX_TYPE type);
@@ -69,7 +69,7 @@ protected:
 	DWORD VertexShader;
 	DWORD OldVertexShader;
 	DWORD PixelShader;
-	s32 UserData;
+	s64 userData;
 };
 
 

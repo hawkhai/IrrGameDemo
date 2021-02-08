@@ -31,7 +31,7 @@ namespace irr
 
             //! Called by the engine when the vertex and/or pixel shader constants for an
             //! material renderer should be set.
-            virtual void OnSetConstants( IMaterialRendererServices* services, s32 userData );
+            virtual void OnSetConstants( IMaterialRendererServices* services, s64 userData );
 
             //! Returns the render capability of the material.
             virtual s32 getRenderCapability() const;

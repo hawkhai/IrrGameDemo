@@ -21,7 +21,7 @@ namespace video
 //! Constructor
 COpenGLShaderMaterialRenderer::COpenGLShaderMaterialRenderer(video::COpenGLDriver* driver,
 	s32& outMaterialTypeNr, const c8* vertexShaderProgram, const c8* pixelShaderProgram,
-	IShaderConstantSetCallBack* callback, IMaterialRenderer* baseMaterial, s32 userData)
+	IShaderConstantSetCallBack* callback, IMaterialRenderer* baseMaterial, s64 userData)
 	: Driver(driver), CallBack(callback), BaseMaterial(baseMaterial),
 		VertexShader(0), UserData(userData)
 {
@@ -49,7 +49,7 @@ COpenGLShaderMaterialRenderer::COpenGLShaderMaterialRenderer(video::COpenGLDrive
 //! create a fall back material for example.
 COpenGLShaderMaterialRenderer::COpenGLShaderMaterialRenderer(COpenGLDriver* driver,
 				IShaderConstantSetCallBack* callback,
-				IMaterialRenderer* baseMaterial, s32 userData)
+				IMaterialRenderer* baseMaterial, s64 userData)
 : Driver(driver), CallBack(callback), BaseMaterial(baseMaterial),
 		VertexShader(0), UserData(userData)
 {

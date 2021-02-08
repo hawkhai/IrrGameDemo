@@ -22,7 +22,7 @@ LOCAL_SRC_FILES := \
 	window.c
 		
 	
-LOCAL_CFLAGS := -DANDROID_NDK -D_ARM_ASSEM_ -DFT2_BUILD_LIBRARY=1 -D_LIB -I./jni/libogg-1.3.0/include  -I./jni/tremor
+LOCAL_CFLAGS := -DANDROID_NDK -D_ARM_ASSEM_ -DFT2_BUILD_LIBRARY=1 -D_LIB -I$(LOCAL_PATH)/../libogg-1.3.0/include  -I$(LOCAL_PATH)
 
 LOCAL_LDLIBS := -ldl -llog
 

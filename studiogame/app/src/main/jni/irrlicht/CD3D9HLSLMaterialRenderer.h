@@ -38,7 +38,7 @@ public:
 		E_PIXEL_SHADER_TYPE psCompileTarget,
 		IShaderConstantSetCallBack* callback,
 		IMaterialRenderer* baseMaterial,
-		s32 userData);
+		s64 userData);
 
 	//! Destructor
 	~CD3D9HLSLMaterialRenderer();

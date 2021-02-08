@@ -279,7 +279,7 @@ s32 COpenGLParallaxMapRenderer::getRenderCapability() const
 
 //! Called by the engine when the vertex and/or pixel shader constants for an
 //! material renderer should be set.
-void COpenGLParallaxMapRenderer::OnSetConstants(IMaterialRendererServices* services, s32 userData)
+void COpenGLParallaxMapRenderer::OnSetConstants(IMaterialRendererServices* services, s64 userData)
 {
 	video::IVideoDriver* driver = services->getVideoDriver();
 

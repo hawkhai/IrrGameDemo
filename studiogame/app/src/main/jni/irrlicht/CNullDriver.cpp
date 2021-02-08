@@ -1823,7 +1823,7 @@ s32 CNullDriver::addHighLevelShaderMaterial(
 	u32 verticesOut,
 	IShaderConstantSetCallBack* callback,
 	E_MATERIAL_TYPE baseMaterial,
-	s32 userData)
+	s64 userData)
 {
 	os::Printer::log("High level shader materials not available (yet) in this driver, sorry");
 	return -1;
@@ -1846,7 +1846,7 @@ s32 CNullDriver::addHighLevelShaderMaterialFromFiles(
 		u32 verticesOut,
 		IShaderConstantSetCallBack* callback,
 		E_MATERIAL_TYPE baseMaterial,
-		s32 userData)
+		s64 userData)
 {
 	io::IReadFile* vsfile = 0;
 	io::IReadFile* psfile = 0;
@@ -1926,7 +1926,7 @@ s32 CNullDriver::addHighLevelShaderMaterialFromFiles(
 		u32 verticesOut,
 		IShaderConstantSetCallBack* callback,
 		E_MATERIAL_TYPE baseMaterial,
-		s32 userData)
+		s64 userData)
 {
 	c8* vs = 0;
 	c8* ps = 0;
@@ -1993,7 +1993,7 @@ s32 CNullDriver::addShaderMaterial(const c8* vertexShaderProgram,
 	const c8* pixelShaderProgram,
 	IShaderConstantSetCallBack* callback,
 	E_MATERIAL_TYPE baseMaterial,
-	s32 userData)
+	s64 userData)
 {
 	os::Printer::log("Shader materials not implemented yet in this driver, sorry.");
 	return -1;
@@ -2006,7 +2006,7 @@ s32 CNullDriver::addShaderMaterialFromFiles(io::IReadFile* vertexShaderProgram,
 	io::IReadFile* pixelShaderProgram,
 	IShaderConstantSetCallBack* callback,
 	E_MATERIAL_TYPE baseMaterial,
-	s32 userData)
+	s64 userData)
 {
 	c8* vs = 0;
 	c8* ps = 0;
@@ -2048,7 +2048,7 @@ s32 CNullDriver::addShaderMaterialFromFiles(const io::path& vertexShaderProgramF
 	const io::path& pixelShaderProgramFileName,
 	IShaderConstantSetCallBack* callback,
 	E_MATERIAL_TYPE baseMaterial,
-	s32 userData)
+	s64 userData)
 {
 	io::IReadFile* vsfile = 0;
 	io::IReadFile* psfile = 0;

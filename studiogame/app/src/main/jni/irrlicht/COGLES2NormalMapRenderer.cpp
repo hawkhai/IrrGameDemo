@@ -108,7 +108,7 @@ namespace irr
 
 //! Called by the engine when the vertex and/or pixel shader constants for an
 //! material renderer should be set.
-        void COGLES2NormalMapRenderer::OnSetConstants( IMaterialRendererServices* services, s32 userData )
+        void COGLES2NormalMapRenderer::OnSetConstants( IMaterialRendererServices* services, s64 userData )
         {
             video::IVideoDriver* driver = services->getVideoDriver();
 

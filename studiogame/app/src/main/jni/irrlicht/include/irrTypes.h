@@ -72,7 +72,7 @@ typedef signed int		s32;
 // This is a typedef for __int64, it ensures portability of the engine.
 // This type is currently not used by the engine and not supported by compilers
 // other than Microsoft Compilers, so it is outcommented.
-//typedef __int64				s64;
+typedef __int64_t				s64;
 
 
 

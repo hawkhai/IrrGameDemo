@@ -398,10 +398,10 @@ struct SEvent
 	struct SUserEvent
 	{
 		//! Some user specified data as int
-		s32 UserData1;
+		s64 userData1;
 
 		//! Another user specified data as int
-		s32 UserData2;
+		s64 userData2;
 	};
 
 	EEVENT_TYPE EventType;

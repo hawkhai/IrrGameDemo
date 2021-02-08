@@ -11,4 +11,12 @@ APP_MODULES :=  \
 
 
 APP_PROJECT_PATH := .
-APP_STL := stlport_static
+APP_STL := c++_static
+APP_ABI := arm64-v8a
+
+APP_CPPFLAGS += -fexceptions -frtti
+
+APP_CFLAGS += -Wno-error=format-security -Wreturn-type
+APP_CPPFLAGS += -Wno-error=c++11-narrowing -Wno-error=format-security -Wreturn-type
+
+APP_SHORT_COMMANDS := true # ndk 编译报 make (e=87): 参数错误

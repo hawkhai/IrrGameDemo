@@ -9,7 +9,9 @@ LOCAL_SRC_FILES := src/bitwise.c \
 	src/framing.c 
 		
 	
-LOCAL_CFLAGS := -DANDROID_NDK  -DFT2_BUILD_LIBRARY=1  -I./jni/libogg-1.3.0/include
+LOCAL_CFLAGS := -DANDROID_NDK  -DFT2_BUILD_LIBRARY=1  -I$(LOCAL_PATH)/include
+
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
 
 LOCAL_LDLIBS := -ldl -llog
 

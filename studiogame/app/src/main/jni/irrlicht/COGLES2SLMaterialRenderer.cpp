@@ -77,7 +77,7 @@ namespace irr
                                                               const c8* pixelShaderProgram,
                                                               IShaderConstantSetCallBack* callback,
                                                               video::IMaterialRenderer* baseMaterial,
-                                                              s32 userData )
+                                                              s64 userData )
                 : Driver( driver ), CallBack( callback ), BaseMaterial( baseMaterial ), FileSystem( 0 ),
                 Program( 0 ), UserData( userData ), UniformStringTable( sDefaultUniformNames ), UniformCount( DEF_UNIFORM_COUNT )
         {
@@ -108,7 +108,7 @@ namespace irr
                                                               IMaterialRenderer* baseMaterial,
                                                               const char* const * uniformStringTable,
                                                               const u32& uniformCount,
-                                                              s32 userData )
+                                                              s64 userData )
                 : Driver( driver ), CallBack( callback ), BaseMaterial( baseMaterial ), FileSystem( fs ),
                 Program( 0 ), UserData( userData ), UniformStringTable( uniformStringTable ),
                 UniformCount( uniformCount )

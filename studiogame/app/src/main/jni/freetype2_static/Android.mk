@@ -27,9 +27,11 @@ LOCAL_SRC_FILES := src/autofit/autofit.c \
 	src/sfnt/sfnt.c \
 	src/smooth/smooth.c \
 	src/truetype/truetype.c
-	
-	
-LOCAL_CFLAGS := -DANDROID_NDK  -DFT2_BUILD_LIBRARY=1  -I./jni/freetype2_static/include  -I./jni/freetype2_static/src
+
+
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
+
+LOCAL_CFLAGS := -DANDROID_NDK  -DFT2_BUILD_LIBRARY=1  -I$(LOCAL_PATH)/../include  -I$(LOCAL_PATH)/../src
 
 LOCAL_LDLIBS := -ldl -llog
 

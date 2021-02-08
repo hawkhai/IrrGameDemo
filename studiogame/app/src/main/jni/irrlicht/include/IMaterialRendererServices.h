@@ -45,7 +45,7 @@ public:
 	matrix) and another one named 'fTime' containing one float, you can set
 	them in your IShaderConstantSetCallBack derived class like this:
 	\code
-	virtual void OnSetConstants(video::IMaterialRendererServices* services, s32 userData)
+	virtual void OnSetConstants(video::IMaterialRendererServices* services, s64 userData)
 	{
 		video::IVideoDriver* driver = services->getVideoDriver();
 

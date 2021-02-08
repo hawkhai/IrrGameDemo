@@ -3,6 +3,10 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := librocket_static
 
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/include \
+			$(LOCAL_PATH)/../freetype2_static/include
+
+
 LOCAL_SRC_FILES := source/Controls/Clipboard.cpp \
 	source/Controls/Controls.cpp \
 	source/Controls/DataFormatter.cpp \
@@ -176,7 +180,7 @@ LOCAL_SRC_FILES := source/Controls/Clipboard.cpp \
 #LOCAL_EXPORT_C_INCLUDES := ./../freetype/include ./../freetype/include/freetype2 ./include
 
 # LOCAL_C_INCLUDES := ./../freetype/include ./../freetype/include/freetype2 ./include
-LOCAL_CFLAGS := -I./jni/freetype2_static/include -I./jni/librocket/include
+LOCAL_CFLAGS := -I$(LOCAL_PATH)/include -I$(LOCAL_PATH)/include
 
 
 include $(BUILD_STATIC_LIBRARY)

@@ -46,7 +46,7 @@ public:
 	//! Constructor
 	COpenGLShaderMaterialRenderer(COpenGLDriver* driver,
 		s32& outMaterialTypeNr, const c8* vertexShaderProgram, const c8* pixelShaderProgram,
-		IShaderConstantSetCallBack* callback, IMaterialRenderer* baseMaterial, s32 userData);
+		IShaderConstantSetCallBack* callback, IMaterialRenderer* baseMaterial, s64 userData);
 
 	//! Destructor
 	virtual ~COpenGLShaderMaterialRenderer();
@@ -67,7 +67,7 @@ protected:
 	//! create a fall back material for example.
 	COpenGLShaderMaterialRenderer(COpenGLDriver* driver,
 					IShaderConstantSetCallBack* callback,
-					IMaterialRenderer* baseMaterial, s32 userData=0);
+					IMaterialRenderer* baseMaterial, s64 userData=0);
 
 	// must not be called more than once!
 	void init(s32& outMaterialTypeNr, const c8* vertexShaderProgram,
@@ -85,7 +85,7 @@ protected:
 	// We have 4 values here, [0] is the non-fog version, the other three are
 	// ARB_fog_linear, ARB_fog_exp, and ARB_fog_exp2 in that order
 	core::array<GLuint> PixelShader;
-	s32 UserData;
+	s64 userData;
 };
 
 

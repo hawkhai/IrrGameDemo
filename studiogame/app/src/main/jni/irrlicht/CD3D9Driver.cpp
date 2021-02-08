@@ -2903,7 +2903,7 @@ bool CD3D9Driver::setPixelShaderConstant(const c8* name, const f32* floats, int 
 s32 CD3D9Driver::addShaderMaterial(const c8* vertexShaderProgram,
 	const c8* pixelShaderProgram,
 	IShaderConstantSetCallBack* callback,
-	E_MATERIAL_TYPE baseMaterial, s32 userData)
+	E_MATERIAL_TYPE baseMaterial, s64 userData)
 {
 	s32 nr = -1;
 	CD3D9ShaderMaterialRenderer* r = new CD3D9ShaderMaterialRenderer(
@@ -2930,7 +2930,7 @@ s32 CD3D9Driver::addHighLevelShaderMaterial(
 		scene::E_PRIMITIVE_TYPE inType, scene::E_PRIMITIVE_TYPE outType,
 		u32 verticesOut,
 		IShaderConstantSetCallBack* callback,
-		E_MATERIAL_TYPE baseMaterial, s32 userData)
+		E_MATERIAL_TYPE baseMaterial, s64 userData)
 {
 	s32 nr = -1;
 

@@ -14,7 +14,7 @@ ANDROID = app-android.cpp android-activity.cpp android-receiver.cpp
 
 LOCAL_MODULE := gamedemo
 LOCAL_ARM_MODE   := arm 
-LOCAL_CFLAGS := -O3 -DANDROID_NDK -DDISABLE_IMPORTGL -I./../include/  -I./jni/irrlicht/ -I./jni/irrlicht/include/ -I./jni/Demo/  -I./jni/freetype2_static/include  -I./jni/freetype2_static/src -I./jni/librocket/include -I./jni/SDL/include -I./jni/SDL_Mixer
+LOCAL_CFLAGS := -O3 -DANDROID_NDK -DDISABLE_IMPORTGL -I$(LOCAL_PATH)/../include/  -I$(LOCAL_PATH)/irrlicht/ -I$(LOCAL_PATH)/irrlicht/include/ -I$(LOCAL_PATH)/Demo/  -I$(LOCAL_PATH)/freetype2_static/include  -I$(LOCAL_PATH)/freetype2_static/src -I$(LOCAL_PATH)/librocket/include -I$(LOCAL_PATH)/SDL/include -I$(LOCAL_PATH)/SDL_Mixer
 																							      
 
 LOCAL_SRC_FILES := \
@@ -35,9 +35,18 @@ LOCAL_STATIC_LIBRARIES := \
 				irrlicht_static \
 				box2d_static				
 
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/irrlicht/include \
+ 	$(LOCAL_PATH)/irrlicht \
+ 	$(LOCAL_PATH)/SDL/include \
+ 	$(LOCAL_PATH)/SDL_mixer \
+ 	$(LOCAL_PATH)/librocket/include \
+ 	$(LOCAL_PATH)/Demo
+
+
 include $(BUILD_SHARED_LIBRARY)
 
 
+$(call import-add-path,$(LOCAL_PATH))
 $(call import-module,box2d)
 $(call import-module,irrlicht)
 $(call import-module,freetype2_static)

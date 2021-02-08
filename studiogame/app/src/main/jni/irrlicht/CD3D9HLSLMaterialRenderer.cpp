@@ -33,7 +33,7 @@ CD3D9HLSLMaterialRenderer::CD3D9HLSLMaterialRenderer(IDirect3DDevice9* d3ddev,
 	E_PIXEL_SHADER_TYPE psCompileTarget,
 	IShaderConstantSetCallBack* callback,
 	IMaterialRenderer* baseMaterial,
-	s32 userData)
+	s64 userData)
 	: CD3D9ShaderMaterialRenderer(d3ddev, driver, callback, baseMaterial, userData),
 	VSConstantsTable(0), PSConstantsTable(0)
 {

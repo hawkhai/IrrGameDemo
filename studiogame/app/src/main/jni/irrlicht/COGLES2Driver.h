@@ -265,7 +265,7 @@ namespace irr
 
             //! Adds a new material renderer to the VideoDriver
             virtual s32 addShaderMaterial( const c8* vertexShaderProgram, const c8* pixelShaderProgram,
-                                           IShaderConstantSetCallBack* callback, E_MATERIAL_TYPE baseMaterial, s32 userData );
+                                           IShaderConstantSetCallBack* callback, E_MATERIAL_TYPE baseMaterial, s64 userData );
 
             //! Adds a new material renderer to the VideoDriver
             virtual s32 addHighLevelShaderMaterial(
@@ -283,7 +283,7 @@ namespace irr
 					u32 verticesOut = 0,
 					IShaderConstantSetCallBack* callback = 0,
 					E_MATERIAL_TYPE baseMaterial = video::EMT_SOLID,
-					s32 userData=0);
+					s64 userData=0);
 
             //! Returns pointer to the IGPUProgrammingServices interface.
             virtual IGPUProgrammingServices* getGPUProgrammingServices();

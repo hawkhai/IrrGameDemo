@@ -43,7 +43,7 @@ public:
 	}
 
 	virtual void OnSetConstants(video::IMaterialRendererServices* services,
-			s32 userData)
+			s64 userData)
 	{		
 		
 		

@@ -33,7 +33,7 @@ public:
 			UsedMaterial=&material;
 		}
 
-		OnSetConstants(IMaterialRendererServices* services, s32 userData)
+		OnSetConstants(IMaterialRendererServices* services, s64 userData)
 		{
 			services->setVertexShaderConstant("myColor", reinterpret_cast<f32*>(&UsedMaterial->color), 4);
 		}
@@ -51,7 +51,7 @@ public:
 	before geometry is being drawn using your shader material. A sample implementation
 	would look like this:
 	\code
-	virtual void OnSetConstants(video::IMaterialRendererServices* services, s32 userData)
+	virtual void OnSetConstants(video::IMaterialRendererServices* services, s64 userData)
 	{
 		video::IVideoDriver* driver = services->getVideoDriver();
 
@@ -73,10 +73,10 @@ public:
 	\param services: Pointer to an interface providing methods to set the constants for the shader.
 	\param userData: Userdata int which can be specified when creating the shader.
 	*/
-	virtual void OnSetConstants(IMaterialRendererServices* services, s32 userData) = 0;
+	virtual void OnSetConstants(IMaterialRendererServices* services, s64 userData) = 0;
 
-	virtual void OnSetAttribute(IMaterialRendererServices* services, s32 userData) {}
-	virtual void OnUnSetAttribute(IMaterialRendererServices* services, s32 userData) {}
+	virtual void OnSetAttribute(IMaterialRendererServices* services, s64 userData) {}
+	virtual void OnUnSetAttribute(IMaterialRendererServices* services, s64 userData) {}
 };
 
 

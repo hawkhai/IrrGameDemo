@@ -88,7 +88,7 @@ public:
 		u32 verticesOut = 0,
 		IShaderConstantSetCallBack* callback = 0,
 		E_MATERIAL_TYPE baseMaterial = video::EMT_SOLID,
-		s32 userData = 0 ) = 0;
+		s64 userData = 0 ) = 0;
 
 	//! convenience function for use without geometry shaders
 	s32 addHighLevelShaderMaterial(
@@ -100,7 +100,7 @@ public:
 		E_PIXEL_SHADER_TYPE psCompileTarget = EPST_PS_1_1,
 		IShaderConstantSetCallBack* callback = 0,
 		E_MATERIAL_TYPE baseMaterial = video::EMT_SOLID,
-		s32 userData = 0 )
+		s64 userData = 0 )
 	{
 		return addHighLevelShaderMaterial(
 			vertexShaderProgram, vertexShaderEntryPointName,
@@ -168,7 +168,7 @@ public:
 		u32 verticesOut = 0,
 		IShaderConstantSetCallBack* callback = 0,
 		E_MATERIAL_TYPE baseMaterial = video::EMT_SOLID,
-		s32 userData = 0) = 0;
+		s64 userData = 0) = 0;
 
 	//! convenience function for use without geometry shaders
 	s32 addHighLevelShaderMaterialFromFiles(
@@ -180,7 +180,7 @@ public:
 		E_PIXEL_SHADER_TYPE psCompileTarget = EPST_PS_1_1,
 		IShaderConstantSetCallBack* callback = 0,
 		E_MATERIAL_TYPE baseMaterial = video::EMT_SOLID,
-		s32 userData = 0)
+		s64 userData = 0)
 	{
 		return addHighLevelShaderMaterialFromFiles(
 			vertexShaderProgramFileName, vertexShaderEntryPointName,
@@ -246,7 +246,7 @@ public:
 		u32 verticesOut = 0,
 		IShaderConstantSetCallBack* callback = 0,
 		E_MATERIAL_TYPE baseMaterial = video::EMT_SOLID,
-		s32 userData = 0) = 0;
+		s64 userData = 0) = 0;
 
 	//! convenience function for use without geometry shaders
 	s32 addHighLevelShaderMaterialFromFiles(
@@ -258,7 +258,7 @@ public:
 		E_PIXEL_SHADER_TYPE psCompileTarget = EPST_PS_1_1,
 		IShaderConstantSetCallBack* callback = 0,
 		E_MATERIAL_TYPE baseMaterial = video::EMT_SOLID,
-		s32 userData = 0)
+		s64 userData = 0)
 	{
 		return addHighLevelShaderMaterialFromFiles(
 			vertexShaderProgram, vertexShaderEntryPointName,
@@ -307,7 +307,7 @@ public:
 		const c8* pixelShaderProgram = 0,
 		IShaderConstantSetCallBack* callback = 0,
 		E_MATERIAL_TYPE baseMaterial = video::EMT_SOLID,
-		s32 userData = 0) = 0;
+		s64 userData = 0) = 0;
 
 	//! Like IGPUProgrammingServices::addShaderMaterial(), but loads from files.
 	/** \param vertexShaderProgram: Text file containing the source of the
@@ -331,7 +331,7 @@ public:
 		io::IReadFile* pixelShaderProgram,
 		IShaderConstantSetCallBack* callback = 0,
 		E_MATERIAL_TYPE baseMaterial = video::EMT_SOLID,
-		s32 userData = 0) = 0;
+		s64 userData = 0) = 0;
 
 	//! Like IGPUProgrammingServices::addShaderMaterial(), but loads from files.
 	/** \param vertexShaderProgramFileName: Text file name containing the
@@ -356,7 +356,7 @@ public:
 		const io::path& pixelShaderProgramFileName,
 		IShaderConstantSetCallBack* callback = 0,
 		E_MATERIAL_TYPE baseMaterial = video::EMT_SOLID,
-		s32 userData = 0) = 0;
+		s64 userData = 0) = 0;
 };
 
 

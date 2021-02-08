@@ -25,7 +25,7 @@ namespace video
 //! Public constructor
 CD3D9ShaderMaterialRenderer::CD3D9ShaderMaterialRenderer(IDirect3DDevice9* d3ddev, video::IVideoDriver* driver,
 		s32& outMaterialTypeNr, const c8* vertexShaderProgram, const c8* pixelShaderProgram,
-		IShaderConstantSetCallBack* callback, IMaterialRenderer* baseMaterial, s32 userData)
+		IShaderConstantSetCallBack* callback, IMaterialRenderer* baseMaterial, s64 userData)
 : pID3DDevice(d3ddev), Driver(driver), CallBack(callback), BaseMaterial(baseMaterial),
 	VertexShader(0), OldVertexShader(0), PixelShader(0), UserData(userData)
 {
@@ -48,7 +48,7 @@ CD3D9ShaderMaterialRenderer::CD3D9ShaderMaterialRenderer(IDirect3DDevice9* d3dde
 CD3D9ShaderMaterialRenderer::CD3D9ShaderMaterialRenderer(IDirect3DDevice9* d3ddev,
 			video::IVideoDriver* driver,
 			IShaderConstantSetCallBack* callback,
-			IMaterialRenderer* baseMaterial, s32 userData)
+			IMaterialRenderer* baseMaterial, s64 userData)
 : pID3DDevice(d3ddev), Driver(driver), CallBack(callback), BaseMaterial(baseMaterial),
 	VertexShader(0), OldVertexShader(0), PixelShader(0), UserData(userData)
 {

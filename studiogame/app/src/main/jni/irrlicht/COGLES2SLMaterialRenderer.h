@@ -95,7 +95,7 @@ namespace irr
                 const c8* pixelShaderProgram,
                 IShaderConstantSetCallBack* callback,
                 IMaterialRenderer* baseMaterial,
-                s32 userData );
+                s64 userData );
 
             //! Destructor
             virtual ~COGLES2SLMaterialRenderer();
@@ -143,7 +143,7 @@ namespace irr
                                        IMaterialRenderer* baseMaterial,
                                        const char* const* uniformStringTable,
                                        const u32& uniformCount,
-                                       s32 userData = 0 );
+                                       s64 userData = 0 );
 
             void init( s32& outMaterialTypeNr,
                        const c8* vertexShaderProgram,
@@ -175,7 +175,7 @@ namespace irr
 
             core::array<SUniformInfo> UniformInfo;
             core::array<SAttributeInfo> AttributeInfo;
-            s32 UserData;
+            s64 UserData;
 
             const char* const* UniformStringTable;
             const int    UniformCount;

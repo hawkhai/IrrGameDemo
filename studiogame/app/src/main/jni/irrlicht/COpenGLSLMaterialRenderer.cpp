@@ -42,7 +42,7 @@ COpenGLSLMaterialRenderer::COpenGLSLMaterialRenderer(video::COpenGLDriver* drive
 		u32 verticesOut,
 		IShaderConstantSetCallBack* callback,
 		video::IMaterialRenderer* baseMaterial,
-		s32 userData)
+		s64 userData)
 	: Driver(driver), CallBack(callback), BaseMaterial(baseMaterial),
 		Program(0), UserData(userData)
 {
@@ -71,7 +71,7 @@ COpenGLSLMaterialRenderer::COpenGLSLMaterialRenderer(video::COpenGLDriver* drive
 //! create a fall back material for example.
 COpenGLSLMaterialRenderer::COpenGLSLMaterialRenderer(COpenGLDriver* driver,
 					IShaderConstantSetCallBack* callback,
-					IMaterialRenderer* baseMaterial, s32 userData)
+					IMaterialRenderer* baseMaterial, s64 userData)
 : Driver(driver), CallBack(callback), BaseMaterial(baseMaterial),
 		Program(0), UserData(userData)
 {

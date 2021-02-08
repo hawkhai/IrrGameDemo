@@ -272,7 +272,7 @@ namespace video
 		//! extGLGetObjectParameteriv(shaderHandle, GL_OBJECT_COMPILE_STATUS_ARB, &status)
 		//! pixel and/or vertex shaders to render geometry.
 		virtual s32 addShaderMaterial(const c8* vertexShaderProgram, const c8* pixelShaderProgram,
-			IShaderConstantSetCallBack* callback, E_MATERIAL_TYPE baseMaterial, s32 userData);
+			IShaderConstantSetCallBack* callback, E_MATERIAL_TYPE baseMaterial, s64 userData);
 
 		//! Adds a new material renderer to the VideoDriver, using GLSL to render geometry.
 		virtual s32 addHighLevelShaderMaterial(
@@ -290,7 +290,7 @@ namespace video
 				u32 verticesOut = 0,
 				IShaderConstantSetCallBack* callback = 0,
 				E_MATERIAL_TYPE baseMaterial = video::EMT_SOLID,
-				s32 userData = 0);
+				s64 userData = 0);
 
 		//! Returns a pointer to the IVideoDriver interface. (Implementation for
 		//! IMaterialRendererServices)

@@ -2586,7 +2586,7 @@ bool COGLES1Driver::setPixelShaderConstant(const c8* name, const f32* floats, in
 s32 COGLES1Driver::addShaderMaterial(const c8* vertexShaderProgram,
 	const c8* pixelShaderProgram,
 	IShaderConstantSetCallBack* callback,
-	E_MATERIAL_TYPE baseMaterial, s32 userData)
+	E_MATERIAL_TYPE baseMaterial, s64 userData)
 {
 	os::Printer::log("No shader support.");
 	return -1;
@@ -2603,7 +2603,7 @@ s32 COGLES1Driver::addHighLevelShaderMaterial(
 	E_PIXEL_SHADER_TYPE psCompileTarget,
 	IShaderConstantSetCallBack* callback,
 	E_MATERIAL_TYPE baseMaterial,
-	s32 userData)
+	s64 userData)
 {
 	os::Printer::log("No shader support.");
 	return -1;

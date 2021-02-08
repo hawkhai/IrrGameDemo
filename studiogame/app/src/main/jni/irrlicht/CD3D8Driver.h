@@ -263,7 +263,7 @@ namespace video
 		//! vertex shaders to render geometry.
 		s32 addShaderMaterial(const c8* vertexShaderProgram, const c8* pixelShaderProgram,
 			IShaderConstantSetCallBack* callback,
-			E_MATERIAL_TYPE baseMaterial, s32 userData);
+			E_MATERIAL_TYPE baseMaterial, s64 userData);
 
 		void createMaterialRenderers();
 

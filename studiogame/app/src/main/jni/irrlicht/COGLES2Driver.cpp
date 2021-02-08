@@ -2263,7 +2263,7 @@ namespace irr
         s32 COGLES2Driver::addShaderMaterial( const c8* vertexShaderProgram,
                                               const c8* pixelShaderProgram,
                                               IShaderConstantSetCallBack* callback,
-                                              E_MATERIAL_TYPE baseMaterial, s32 userData )
+                                              E_MATERIAL_TYPE baseMaterial, s64 userData )
         {
             os::Printer::log( "No shader support." );
             return -1;
@@ -2286,7 +2286,7 @@ namespace irr
 				u32 verticesOut,
 				IShaderConstantSetCallBack* callback,
 				E_MATERIAL_TYPE baseMaterial,
-				s32 userData)
+				s64 userData)
         {
             s32 nr = -1;
             COGLES2SLMaterialRenderer* r = new COGLES2SLMaterialRenderer(
